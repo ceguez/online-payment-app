@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://thymeleaf.org">
+	<head>
+		<title> Thank you for your payment!</title>
+	</head>
+	<body>
+		<h1> Your service has been booked successfully.</h1> 
+		
+		<h3> Do you want to schedule service for a month? </h3>
+		<p> Get 35% off our services when you book a whole month!</p>
+		<p> Click below to SAVE: $140 </p>
+		
+		<form action = "" method = "post">
+			<button> Book ONE month </button>
+		</form>
+		
+		<h3>Subscribe to a monthly plan and save 50%</h3>
+		<p> By joining monthly plan you will get services at 50% the price!</p>
+		<p>You will be billed automatically every month at the rate of $200 (instead of $400)</p>
+		
+		<form th:action = "@{/subscribe?email={em}(em=${email})}" method="post">
+      		<button>Subscribe Now</button>
+    	</form>
+		
+	</body>
+</html>
